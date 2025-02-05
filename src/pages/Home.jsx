@@ -1,28 +1,13 @@
-/*import { useEffect, useState } from "react";
-
-function Home() {
-  return (
-    <>
-      <header>
-        {/* What component should go here? *}
-      </header>
-      <main>
-        {/* Info goes here! *}
-      </main>
-    </>
-  );
-};
-
-export default Home;
-*/
+// src/pages/Home.jsx
 import { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";      
-import MovieCard from "../components/MovieCard"; 
+import NavBar from "../components/NavBar";
+import MovieCard from "../components/MovieCard";
+
 function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    // Sample movie data; note that we include at least three movies.
+    // Sample movie data with at least three movies.
     const moviesData = [
       { id: 1, title: "Doctor Strange" },
       { id: 2, title: "Inception" },
@@ -39,7 +24,7 @@ function Home() {
       </header>
       <main>
         {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} />
+          <MovieCard key={movie.id} id={movie.id} title={movie.title} />
         ))}
       </main>
     </>

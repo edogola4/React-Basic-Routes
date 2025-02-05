@@ -1,27 +1,29 @@
 // src/pages/Movie.jsx
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import NavBar from "../components/NavBar";
 
 function Movie() {
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
+  
+  // Synchronously assign movie data when id is "1"
+  const movie =
+    id === "1"
+      ? {
+          id: 1,
+          title: "Doctor Strange",
+          time: "115",
+          genres: ["Action", "Adventure", "Fantasy"],
+        }
+      : null;
 
-  useEffect(() => {
-    // For testing purposes, when id is "1", we simulate a fetch.
-    if (id === "1") {
-      const movieData = {
-        id: 1,
-        title: "Doctor Strange",
-        time: "115",
-        genres: ["Action", "Adventure", "Fantasy"],
-      };
-      setMovie(movieData);
-    }
-    // You might want to handle other ids in a real app.
-  }, [id]);
-
-  if (!movie) return null;
+  if (!movie) {
+    return (
+      <>
+        <NavBar />
+        <div>Loading...</div>
+      </>
+    );
+  }
 
   return (
     <>

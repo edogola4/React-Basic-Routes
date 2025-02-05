@@ -1,33 +1,14 @@
-/*import { useEffect, useState } from "react";
-
-function Movie() {
-  return (
-    <>
-      <header>
-        {/* What component should go here? *}
-      </header>
-      <main>
-        {/* Movie info here! *}
-      </main>
-    </>
-  );
-};
-
-export default Movie;
-*/
-
-
+// src/pages/Movie.jsx
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import NavBar from "../components/NavBar"; 
+import NavBar from "../components/NavBar";
 
 function Movie() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
   useEffect(() => {
-    // Simulate fetching the movie data.
-    // In a real application, you'd fetch from an API using the id.
+    // For testing purposes, when id is "1", we simulate a fetch.
     if (id === "1") {
       const movieData = {
         id: 1,
@@ -37,6 +18,7 @@ function Movie() {
       };
       setMovie(movieData);
     }
+    // You might want to handle other ids in a real app.
   }, [id]);
 
   if (!movie) return null;

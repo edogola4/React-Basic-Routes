@@ -18,7 +18,8 @@ export default Actors;
 
 
 
-import NavBar from "./NavBar"; // Adjust the import path as needed
+import NavBar from "../components/NavBar";
+
 
 const actors = [
   {

@@ -17,8 +17,7 @@ export default Directors;
 */
 
 
-import NavBar from "./NavBar"; // Adjust the import path as needed
-
+import NavBar from "../components/NavBar";
 // The directors data as specified in your test.
 const directors = [
   {

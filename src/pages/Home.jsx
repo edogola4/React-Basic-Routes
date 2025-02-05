@@ -16,9 +16,8 @@ function Home() {
 export default Home;
 */
 import { useEffect, useState } from "react";
-import NavBar from "./NavBar";      // Make sure the path is correct
-import MovieCard from "./MovieCard"; // Make sure the path is correct
-
+import NavBar from "../components/NavBar";      
+import MovieCard from "../components/MovieCard"; 
 function Home() {
   const [movies, setMovies] = useState([]);
 

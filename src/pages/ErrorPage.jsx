@@ -14,7 +14,7 @@ const ErrorPage = () => {
 export default ErrorPage;
 */
 
-import NavBar from "../components/NavBar"; // Adjust the path as necessary
+import NavBar from "../components/NavBar"; 
 
 function ErrorPage() {
   return (

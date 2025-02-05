@@ -19,7 +19,7 @@ export default Movie;
 
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import NavBar from "./NavBar"; 
+import NavBar from "../components/NavBar"; 
 
 function Movie() {
   const { id } = useParams();
